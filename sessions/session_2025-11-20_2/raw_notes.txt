@@ -1,0 +1,59 @@
+Networking Notes - Test
+
+1. OSI Model:
+   - 7 layers: Physical, Data Link, Network, Transport, Session, Presentation, Application
+   - Physical: cables, switches
+   - Data Link: MAC addresses, frames, Ethernet
+   - Network: IP addressing, routing
+   - Transport: TCP/UDP, port numbers, flow control
+   - Session: session management
+   - Presentation: encryption, formatting
+   - Application: HTTP, FTP, SMTP, DNS
+
+2. TCP/IP Model:
+   - 4 layers: Link, Internet, Transport, Application
+   - Link = OSI Physical + Data Link
+   - Internet = OSI Network
+   - Transport = OSI Transport
+   - Application = OSI Session + Presentation + Application
+
+3. IP Addressing:
+   - IPv4: 32-bit, dotted decimal, 4 octets
+   - IPv6: 128-bit, hex
+   - Subnetting: dividing networks
+   - CIDR notation: e.g., /24
+
+4. Routing:
+   - Static vs dynamic routing
+   - Routers forward packets based on IP
+   - Routing protocols: RIP, OSPF, BGP
+
+5. Switching:
+   - Switches work at Data Link layer
+   - MAC address table
+   - VLANs for segmentation
+
+6. TCP vs UDP:
+   - TCP: connection-oriented, reliable, flow control, error-checking
+   - UDP: connectionless, fast, no guaranteed delivery
+
+7. Common Protocols:
+   - HTTP/HTTPS, FTP, SFTP
+   - DNS: domain name to IP
+   - DHCP: assigns IP addresses dynamically
+   - SNMP: network management
+
+8. Network Devices:
+   - Hub: simple, broadcasts
+   - Switch: MAC-based forwarding
+   - Router: IP-based forwarding
+   - Firewall: packet filtering
+
+9. Wireless Networking:
+   - Wi-Fi standards: 802.11 a/b/g/n/ac/ax
+   - SSID, encryption (WEP/WPA/WPA2/WPA3)
+   - Channels and interference
+
+10. Network Troubleshooting:
+    - ping, traceroute, nslookup, ipconfig/ifconfig
+    - Check connectivity, latency, packet loss
