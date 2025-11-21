@@ -72,10 +72,15 @@ def load_notes(event):
         raw_file = Path(selected) / "raw_notes.txt"
         if raw_file.exists():
             temp_text = raw_file.read_text()
-    
-    # Temporarily overwrite editor for preview
+
+    text_box.config(state=tk.NORMAL)
     text_box.delete("1.0", tk.END)
     text_box.insert(tk.END, temp_text)
+    text_box.config(state=tk.DISABLED)  # preview mode
+
+    # Show only Back button
+    summarize_btn.pack_forget()
+    back_btn.pack(side=tk.LEFT, padx=5)
 
 def toggle_view():
     """Switch between input and output view"""
@@ -89,8 +94,20 @@ def toggle_view():
 
 def back_to_current_notes():
     """Restore in-progress notes"""
+    text_box.config(state=tk.NORMAL)
     text_box.delete("1.0", tk.END)
     text_box.insert(tk.END, current_notes)
+
+    # Show only Summarize button
+    back_btn.pack_forget()
+    summarize_btn.pack(side=tk.LEFT, padx=5)
+
+def on_text_change(event=None):
+    """Update current_notes as user types"""
+    global current_notes
+    if text_box.cget("state") == tk.NORMAL:
+        current_notes = text_box.get("1.0", tk.END)
+    text_box.edit_modified(False)  # reset modified flag
 
 # --- GUI ---
 window = tk.Tk()
@@ -114,16 +131,17 @@ paned.add(left_frame, width=250)
 # --- Right pane: text editor and buttons ---
 right_frame = tk.Frame(paned)
 text_box = tk.Text(right_frame, wrap="word", font=("Arial", 12))
-text_box.pack(expand=True, fill=tk.BOTH, padx=5, pady=5)
+text_box.pack(expand=True, fill="both", padx=5, pady=5)
+text_box.bind("<<Modified>>", on_text_change)
 
 btn_frame = tk.Frame(right_frame)
 btn_frame.pack(pady=5)
 
 summarize_btn = tk.Button(btn_frame, text="Summarize Notes", font=("Arial", 14), command=summarize)
-summarize_btn.pack(side=tk.LEFT, padx=5)
+summarize_btn.pack(side=tk.LEFT, padx=5)  # visible at launch
 
 back_btn = tk.Button(btn_frame, text="Back to Current Notes", font=("Arial", 14), command=back_to_current_notes)
-back_btn.pack(side=tk.LEFT, padx=5)
+# Do NOT pack back_btn at launch
 
 paned.add(right_frame, width=750)
 

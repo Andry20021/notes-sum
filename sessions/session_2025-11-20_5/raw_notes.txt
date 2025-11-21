@@ -1,0 +1,73 @@
+Here are the detailed network notes:
+1. OSI Model:
+The OSI (Open Systems Interconnection) model is a 7-layered framework that provides a structured approach to designing and implementing computer networks.
+Each layer of the OSI model focuses on a specific function, from physical connections to high-level protocols.
+Physical Layer (Layer 1): + Defines the physical means of data transmission + Cables, switches, routers
+Data Link Layer (Layer 2): + Ensures error-free transfer of data frames between two devices on the same network + MAC (Media Access Control) addresses, frames, Ethernet
+Network Layer (Layer 3): + Routes data between networks + IP (Internet Protocol) addressing, routing protocols like RIP, OSPF, BGP
+Transport Layer (Layer 4): + Provides reliable data transfer between devices on the same network or over a distance + TCP (Transmission Control Protocol), UDP (User Datagram Protocol)
+Session Layer (Layer 5): + Establishes and manages connections between applications running on different devices + Presentation layer encryption, formatting
+Presentation Layer (Layer 6): + Converts data into a format that can be understood by the receiving device + Application-layer protocols like HTTP, FTP, SMTP, DNS
+Application Layer (Layer 7): + Provides services to end-user applications + Protocols like TCP/IP, HTTP/HTTPS, FTP, SFTP
+2. TCP/IP Model:
+The TCP/IP model is a 4-layered framework that provides a structured approach to designing and implementing computer networks.
+Each layer of the TCP/IP model focuses on a specific function, from physical connections to high-level protocols.
+Link Layer (Layer 1): + Ensures efficient transmission of data between devices connected through a cable or switch + Link Layer protocols like ARP, RARP
+Internet Layer (Layer 2): + Routes traffic between networks and provides addressing information + Network Layer protocols like RIP, OSPF, BGP
+Transport Layer (Layer 3): + Provides reliable data transfer between devices on the same network or over a distance + Transport Layer protocols like TCP, UDP
+Application Layer (Layer 4): + Provides services to end-user applications + Application-layer protocols like HTTP, FTP, SMTP, DNS
+3. IP Addressing:
+Internet Protocol (IP) is used to address devices on the internet
+There are two types of IP addresses:
+IPv4: 32-bit, dotted decimal, 4 octets
+IPv6: 128-bit, hex
+Subnetting: + Divides a network into smaller segments or sub-networks + CIDR (Common Internet Protocol Request Data Registration) notation is used to specify subnet masks
+4. Routing:
+Static routing and dynamic routing are two common methods used to route packets between networks.
+Routers forward packets based on IP addresses, using routing protocols like RIP, OSPF, BGP.
+Routing Protocols: + RIP (Remote Internet Protocol) + OSPF (Open Shortest Path First) + BGP (Border Gateway Protocol)
+5. Switching:
+Switches work at the Data Link layer
+MAC (Media Access Control) addresses are used to forward packets within a network
+MAC Address Table: + A table that stores information about all devices connected to a switch
+VLANs (Virtual Local Area Networks): + Segregated networks, each with its own set of devices and protocols + Used for segmentation in large-scale networks
+6. TCP vs UDP:
+TCP (Transmission Control Protocol) is a connection-oriented protocol that ensures reliable data transfer between devices.
+Reliable delivery, error-checking, flow control, and congestion control
+UDP (User Datagram Protocol) is a connectionless protocol that provides fast, but unreliable data transfer.
+No guarantee of delivery, no error-checking
+7. Common Protocols:
+HTTP/HTTPS: Hypertext Transfer Protocol over HTTPS
+Secure web browsing using TLS encryption
+FTP (File Transfer Protocol): File transfer over the network
+Reliable file transfer between devices
+SFTP (Secure File Transfer Protocol): Secure file transfer over the network
+Secure file transfer between devices, especially in secure environments
+DNS (Domain Name System): Domain name to IP addressing
+Maps domain names to IP addresses for ease of use and access
+DHCP (Dynamic Host Configuration Protocol): Dynamic assignment of IP addresses to devices on a network
+Automatically assigns IP addresses based on device capabilities
+8. Network Devices:
+Hub: Simple, broadcasts data between connected devices
+Switch: MAC-based forwarding, uses switches as the backbone of a network
+Router: IP-based forwarding, used to route traffic between networks
+Firewall: Packet filtering, used to protect a network from unauthorized access or malicious activity
+9. Wireless Networking:
+Wi-Fi standards:
+802.11 a/b/g/n/ac/ax: Various wireless communication protocols and standards
+SSID (Service Set Identifier): A unique identifier for a wireless network
+Encryption methods:
+WEP/WPA/WPA2/WPA3: Various encryption protocols used in Wi-Fi networks
+Channels and interference:
+Various channels, such as 2.4 GHz and 5 GHz
+Interference from nearby devices or physical obstacles
+10. Network Troubleshooting:
+Ping (Ping of Light):
+Verifies network connectivity by sending a packet to the destination device
+Traceroute:
+Displays the path packets take through the network, helping identify bottlenecks
+NSlookup:
+Uses DNS queries to resolve domain names to IP addresses
+IPconfig/Ifconfig:
+Configures and displays network settings, such as Ethernet adapters
+These detailed notes should provide a comprehensive understanding of network concepts, protocols, devices, and troubleshooting techniques.
